@@ -26,7 +26,6 @@ ui <- fluidPage(titlePanel(title = "Bike Sharing System Evolution"),
                   sidebarPanel(selectInput(inputId ="City", "Select BSS:", choices = Names, selected = "London", multiple = F)),
                 mainPanel(fluidRow(plotOutput("Weekday")), br(), br(),br(), br(),br(), br(),br(), br(),br(), br(),br(), br(),br(), br(),br(), br(),br(), br(),
                           fluidRow(plotOutput("Weekend"))))
-                          fluidRow(plotOutput("Weekend"))))
 
 server <- function(input, output){
   output$Weekday <- renderPlot({
